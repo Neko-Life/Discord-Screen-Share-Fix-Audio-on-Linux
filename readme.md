@@ -42,7 +42,7 @@
  ```sh
  pactl unload-module <number>
  ```
- where `<number>` are one of the script terminal output. Do it once for each number.
+ where `<number>` are one of the script's terminal output. Do it once for each number.
 
  # Issues
 
