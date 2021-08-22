@@ -4,7 +4,7 @@
 
  ## Requirements
 
- * `pulseaudio`: This thing is our savior. **Must** be _installed_. Usually comes pre-installed or else, _install_.
+ * `pulseaudio`: This thing is our savior. Usually comes pre-installed. If not then probably your system is using something else so better **not** use this script than breaking your system by replacing your current one with `pulseaudio`, this script is for `pulseaudio` only.
  * `pavucontrol-qt`: To configure input and output from mic and app into discord.
 
  ## Setting Up
