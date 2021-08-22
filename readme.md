@@ -53,6 +53,6 @@
 
  # Issues
 
- * If discord crashes upon changing `pavucontrol-qt` settings, try changing input and output device in Voice & Video settings in discord to default, just click default even if it's the same as not changing anything.
+ * If discord crashes upon changing `pavucontrol-qt` settings or when streaming, try changing input and output device in Voice & Video settings in discord to default, just click default even if it's the same as not changing anything.
 
 Tested in Manjaro Linux (Arch)
