@@ -42,7 +42,12 @@
  ```sh
  pactl unload-module <number>
  ```
- where `<number>` is one of the script's terminal output. Do it once for each number.
+ where `<number>` is one of the script's terminal output. Do it once for each number. If you forget the numbers, run
+ ```sh
+ pactl list
+ ```
+ and find the virtual streams number.
+
  * If discord ever prompt you to switch audio device, **don't switch!**
  * If you don't want to run the script every time you boot up your PC, copy the codes from the script (exclude the first line) and append it to your `/etc/pulse/default.pa`.
 
