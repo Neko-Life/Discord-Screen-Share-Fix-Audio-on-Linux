@@ -5,7 +5,7 @@
  ## Requirements
 
  * `pulseaudio`: This thing is our savior. Usually comes pre-installed. If not then probably your system is using something else so better **not** use this script than breaking your system by replacing your current one with `pulseaudio`, this script is for `pulseaudio` only.
- * `pavucontrol-qt`: To configure input and output from mic and app into discord.
+ * `pavucontrol-qt`: To configure input and output from mic and app into discord. Very useful tool for routing your audio.
 
  ## Setting Up
 
@@ -53,6 +53,6 @@
 
  # Issues
 
- * If discord crashes upon changing `pavucontrol-qt` settings or when streaming, try changing input and output device in Voice & Video settings in discord to default, just click default even if it's the same as not changing anything.
+ * If discord crashes when streaming, ignore it. Try streaming again, usually only one time crash.
 
 Tested in Manjaro Linux (Arch)
