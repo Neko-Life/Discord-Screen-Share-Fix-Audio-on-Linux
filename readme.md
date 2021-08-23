@@ -37,7 +37,7 @@
  ## Tips
 
  * You can mute your mic in `pavucontrol-qt`.
- * Try setting discord input sensitivity to -100dB on discord settings.
+ * Try setting discord input sensitivity to -100dB(or -99dB if you want the indicator to show when your audio is inactive) on discord settings.
  * If you wanna remove the virtual streams, run
  ```sh
  pactl unload-module <number>
