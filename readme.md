@@ -1,58 +1,13 @@
- # Discord Screen Share Fix Audio on Linux
+## Requirements
 
- No need too much bla-bla lets just get it over with.
+* Copy your default pipewire.conf from `/usr/share/pipewire/` to `~/.config/pipewire/`
+* Copy the contents of pipewire.conf from this repository and paste them inside `content.exec = []` located at the end of your pipewire.conf ![image](https://user-images.githubusercontent.com/77363063/172093587-3a62f1ed-e8be-4800-8791-cc1c1912eb51.png)
+* Restart pipewire.service using `systemctl --user restart pipewire.service`
+* Done
 
- ## Requirements
+## How to use
 
- * `pulseaudio`: This thing is our savior. Usually comes pre-installed. If not then probably your system is using something else so better **not** use this script than breaking your system by replacing your current one with `pulseaudio`, this script is for `pulseaudio` only.
- * `pavucontrol-qt`: To configure input and output from mic and app into discord. Very useful tool for routing your audio.
-
- ## Setting Up
-
- Just run the script:
- ```sh
- ./discord-scrshrwa.sh
- ```
- `chmod +x` it first if it's not executable yet.
-
- And then boot up discord, hop in a VC and start streaming.
- It's that ez, so simple right.
-
-
- ## hol' up, _it's not done yet_
-
- Now you're _in a vc and streaming_ some hanime with no audio, your friends and gfs that are watching are complainin in the background as you're doing these:
-
- Open `pavucontrol-qt` and find your browser/game in `Playback` tab and set its playback on `app`,
- and then go to the `Recording` tab and find something like `WEBRTC VoiceEngine :recStream` and set its source to `Monitor of mic+app`.
-
-
- # Anddddddd Done
-
- Close (or don't) `pavucontrol-qt`.
-
- Go back to discord, _unmute_ yourself and continue your hanime and watch together with everyone, safe and sound.
-
-
- ## Tips
-
- * You can mute your mic in `pavucontrol-qt`.
- * Try setting discord input sensitivity to -100dB(or -99dB if you want the indicator to show when your audio is inactive) on discord settings.
- * If you wanna remove the virtual streams, run
- ```sh
- pactl unload-module <number>
- ```
- where `<number>` is one of the script's terminal output. Do it once for each number. If you forget the numbers, run
- ```sh
- pactl list
- ```
- and find the virtual streams number.
-
- * If discord ever prompt you to switch audio device, **don't switch!**
- * If you don't want to run the script every time you boot up your PC, copy the codes from the script (exclude the first line) and append it to your `/etc/pulse/default.pa`, make sure to remove the `pactl` prefix from each line.
-
- # Issues
-
- * If discord crashes when streaming, ignore it. Try streaming again, usually only one time crash.
-
-Tested in Manjaro Linux (Arch)
+* Open app with video/music playing and open pavucontrol
+* Open the playback tab inside pavucontrol and select 'app' from the dropdown menu for the channel who's audio you want to be shared (Firefox in this example)![image](https://user-images.githubusercontent.com/77363063/172094382-ee3e5735-8181-4421-8459-471eeffe7e82.png)
+* Now open the recording tab, and select 'mic+app' for the channel you want to share your app audio + mic to (Discord in this example)![image](https://user-images.githubusercontent.com/77363063/172094811-6d4c8649-5c42-4c31-8e71-57708d634ce7.png)
+* Done
