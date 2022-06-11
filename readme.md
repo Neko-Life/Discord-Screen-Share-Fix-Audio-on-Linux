@@ -56,6 +56,6 @@
 
  * If discord crashes when streaming, ignore it. Try streaming again, usually only one time crash.
 
-Tested in
+# Tested in
 - Manjaro Linux (Arch)
 - Ubuntu 20.04
