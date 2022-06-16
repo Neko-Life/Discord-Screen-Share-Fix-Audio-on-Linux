@@ -59,3 +59,5 @@
 # Tested in
 - Manjaro Linux (Arch)
 - Ubuntu 20.04
+- Arch Linux x86_64
+- Void Linux
